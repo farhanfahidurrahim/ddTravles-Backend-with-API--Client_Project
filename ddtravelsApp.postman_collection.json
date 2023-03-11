@@ -1,0 +1,1120 @@
+{
+	"info": {
+		"_postman_id": "5e18350d-9e0f-472e-9f22-61ec89e28ad2",
+		"name": "DDTravels End-Point",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8803091"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Rakib",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "customer",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rakib@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "01200000002",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2023-03-10",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/G:/img test/img_avatar.png"
+						},
+						{
+							"key": "address",
+							"value": "Kishoreganj",
+							"type": "text"
+						},
+						{
+							"key": "prefer",
+							"value": "Blaa, Tuja, UHUI",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/register",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rakib@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/login",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info : Authorized",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/user",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Division with Hotel & Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/all-division",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"all-division"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Hotel with Their Room Lists",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/all-hotel",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"all-hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Hotel Room List with Hotel",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzM1YTFjNzMwYmE3ZGFjNjkwMjYxOGQ4ZGEzMDdlYTRjMjUyYWFhZjYyMzQ0ODgxODNkZjc4MWNlMGI0MDBlNDUxMzNmNzQwZjAzMWUzNjMiLCJpYXQiOjE2NzgzMzY5NDguMDA1MzExLCJuYmYiOjE2NzgzMzY5NDguMDA1MzEyLCJleHAiOjE3MDk5NTkzNDguMDAyMDQ1LCJzdWIiOiIzOCIsInNjb3BlcyI6W119.DWoyYnNcM1Qp6HY7KpPiPW_l9yPplnXNRTRzF-krsSBGQ0DBm9buxj2OElauIof4kWnfsJx0gFClhElvic-knM-5o9nViHX3p5xVlVdpYzevJ26P0d7v0G4FIWY1crLWH3iVnUouYrYYwkW-YzTU3V1flfKEvaaYhHnslHzVwaM7AqnFiOeR8CW1U-70bWtG88t93lUPf8-Jl3PIZ_d0Em3oHnkVoM2yxO_dSaGG1_UnDoGJzZJL9SRybWo-YOyXqyT32_T0REbryJQ2HH3CvR5cwjJoFWyDd-PvZ0BFoA1hqA8r129EqvCKRd_auNjN9zyzoOQ2fc-OOVGkbv6uUqTrxH32A-aJmE0-SVYw5byyxFhcwgrKH11payqUHTa3LrgpEPddqT9rC5LHHRJxagX0Plh3m-sT65O11mvXPfogi1DTA0v-HdIlct1qClg1IxEhNfE8NoKaAR9BBolCvuUarJUXtEEGLlYSy5BIBJ4QTgHUC8pcN6_Fw07vFSE6MO-d3CNQiajroQ8hQmSjuk8udBrPoeHCgnRH3mj0KUzgSkZcQ-u2M_8M-8-ULPnhFnS3nd-xAuVrD6CQ3sr6y9vD69x7Xl4Sg02oD9WBMytr_NzEr2pXx_wLjQu_fcN2vAVgFZcQhKAqHfCNzlv1P-3oezSZlA2cnqbvw2Xfl8I",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/hotel-Room-list",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"hotel-Room-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel Review (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "star",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "feedback",
+							"value": "jossssss",
+							"type": "text"
+						},
+						{
+							"key": "hotelid",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "hotelname",
+							"value": "Zorita Grant",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/hotel-review",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"hotel-review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Hotel By Division-Where u wanna go",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "division",
+							"value": "Dhaka",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/search_hotel_by_division",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"search_hotel_by_division"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Restaurant List",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODI5MDgwMDUzMzY2MzBjYjcwYjVhNWE4YTFmMTEyOGQ0ZjdhMTY4NWI2ZDgwNGRjYjYyYzc2YzAyZGNkYThlZDY2YzkzNzE3ZTQxNTNlN2QiLCJpYXQiOjE2Nzg0MjQ0NTQuNzEwMjMyLCJuYmYiOjE2Nzg0MjQ0NTQuNzEwMjM0LCJleHAiOjE3MTAwNDY4NTQuNzA3NTY1LCJzdWIiOiIzOSIsInNjb3BlcyI6W119.e8ZGSq8QvwWMUj4s_IiS8EqwlbutWfjv2-alOOXDxSv4CXNwiJcztjT3WdNgEjS8pAXT5kTAPIkmgfevAnoOaU5OlZnfeVvEmvq2S_d6DBYufpqi_lJ9bpUw-CpIcchfGFXh-xoC4XOxP6swA-RlLf3yU_Wdc6P9KpEkZfslgsPGLrqvJUkLIOiA6MhtrGKWWrzt7F4QsAr95e348FbIXucqeLVLIxjxbF6iwcKrV7cj73gC9vCUjNt9RiNeXvQnaAQZOLP4Cjid4URwkIGOGacqxaIs4V9-b82R2dq5o3GhFU1NY_Awm0DD_Ya70H7BPAacOg5xYE4lN5rikZytT3TgK_AnFAxSpP9XUotdC7bTnQf26BsBpTvi_lr1a7XHSfXLkMQkwdn1LPACWQiOGWqYN-dYyNSajbdhzVngZ5aBb30ts50CuIhQ8_siWhrqbr2wO0wlhk7DUMyQm_rnMA9U_n5FmO-wYONL2a0o9APnVvMuIokbvV2Ncves9XpkA6Mab5ossJm0eFoJaJyTRpgCA-Xpw1uOaskmlbwx7xC4qpxPINxih_6DjS_RhHDfUmTiDHw0T8Lhl5Diw_ARSx7fKseiLE2LZuO1ag8A2sdeVOX_N2rESLAiuPgxv5KR3DeZznjDEbjjiO4S8x2GNnDfYjgTxLqRiQu0upwT4Zo",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/all-restaurant",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"all-restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-Menus",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTFlMjM0OTMzMDU2ZjZjZDFkMjQxOWI4NzA3NmNhNWNiODRiZmU2ODBlMDNiNmFlOTNjNzdmNmVmODI0N2QwYWE3MWY3NjI4NTg0ZGVhNmMiLCJpYXQiOjE2NzgxNjQxMzAuNjIxNzM0LCJuYmYiOjE2NzgxNjQxMzAuNjIxNzM1LCJleHAiOjE3MDk3ODY1MzAuNjE5Nzc0LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.cXh-4AgZ962zGZtoEIbZAHbC_1qxs1mIwZwa6NDBJzphmcB5x4oXLoS1o7_4Dn4HVylRSMF4w5uqNT6z64hZAaq5TA-H-xYEfJaLqI2q08ffWDEYHeUAbcXkZJ3CXQ1ZCgePvnISONI5ljscPKBwSMgkG26TtzrlnGRMqcBX4cWjVpLYWMNYL6RXhNS6Gqfmxk6zp-NPNYx8-JH0qm70mwvlwWvmgMeY4aX58WPxlcLsS4xo-wqvKMFL_M4nyKiEwCvztnztSG_Nj4NodIjJGpTsAKi4AWZDGcVXvqBLh5sFuXVQMaJ7HNj-OSCgJuuRIN2WmpxCi0vQwp5c6OHGQo9E5DxUZHvGjH1yo28srSWD56kLPigGQhgOnGVnFpVpnJJ3RrtQMPyw5G-4YcWZc-NmJqsZHKpAwyd13Lev5MS2w_ZXkK-cgeMQyFcD7suBVBbIsESXNtdw1EysdErKZKupyluad8iF5m9Mw_hlNj_ROYrNZnr5zzSUMiBxQX-qDml1yPf5icHBhpUG3m-wx0NTLt-DNlSBwqU3W-LtBTA1nJuktBgSP-RouN1L7rcae8OOqhOaDMHfVuft_5hbyHdW11WgI2vx7Xi6_LviJwa7Fpm36nprU47wHQPx75sScqZqU05u6gYEQaFND_pSwRXDGiLvToZigHdmprXQUDI",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/all-restaurant-menus",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"all-restaurant-menus"
+					]
+				},
+				"description": "here you will get all menur according to their restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant Review (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "star",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "feedback",
+							"value": "osthiiiiirrr",
+							"type": "text"
+						},
+						{
+							"key": "restid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "restname",
+							"value": "Cairo Hart",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/restaurant-review",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"restaurant-review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Restaurant",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"connection": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTFlMjM0OTMzMDU2ZjZjZDFkMjQxOWI4NzA3NmNhNWNiODRiZmU2ODBlMDNiNmFlOTNjNzdmNmVmODI0N2QwYWE3MWY3NjI4NTg0ZGVhNmMiLCJpYXQiOjE2NzgxNjQxMzAuNjIxNzM0LCJuYmYiOjE2NzgxNjQxMzAuNjIxNzM1LCJleHAiOjE3MDk3ODY1MzAuNjE5Nzc0LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.cXh-4AgZ962zGZtoEIbZAHbC_1qxs1mIwZwa6NDBJzphmcB5x4oXLoS1o7_4Dn4HVylRSMF4w5uqNT6z64hZAaq5TA-H-xYEfJaLqI2q08ffWDEYHeUAbcXkZJ3CXQ1ZCgePvnISONI5ljscPKBwSMgkG26TtzrlnGRMqcBX4cWjVpLYWMNYL6RXhNS6Gqfmxk6zp-NPNYx8-JH0qm70mwvlwWvmgMeY4aX58WPxlcLsS4xo-wqvKMFL_M4nyKiEwCvztnztSG_Nj4NodIjJGpTsAKi4AWZDGcVXvqBLh5sFuXVQMaJ7HNj-OSCgJuuRIN2WmpxCi0vQwp5c6OHGQo9E5DxUZHvGjH1yo28srSWD56kLPigGQhgOnGVnFpVpnJJ3RrtQMPyw5G-4YcWZc-NmJqsZHKpAwyd13Lev5MS2w_ZXkK-cgeMQyFcD7suBVBbIsESXNtdw1EysdErKZKupyluad8iF5m9Mw_hlNj_ROYrNZnr5zzSUMiBxQX-qDml1yPf5icHBhpUG3m-wx0NTLt-DNlSBwqU3W-LtBTA1nJuktBgSP-RouN1L7rcae8OOqhOaDMHfVuft_5hbyHdW11WgI2vx7Xi6_LviJwa7Fpm36nprU47wHQPx75sScqZqU05u6gYEQaFND_pSwRXDGiLvToZigHdmprXQUDI",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/view-restaurant/rest_id=2",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"view-restaurant",
+						"rest_id=2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Claimed Discount (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/claimed-discount/restid=2/restname=Cairo Hart",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"claimed-discount",
+						"restid=2",
+						"restname=Cairo Hart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "About Us (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/about-us",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"about-us"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Privacy Policy (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/privacy-policy",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"privacy-policy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Help Support (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTFlMjM0OTMzMDU2ZjZjZDFkMjQxOWI4NzA3NmNhNWNiODRiZmU2ODBlMDNiNmFlOTNjNzdmNmVmODI0N2QwYWE3MWY3NjI4NTg0ZGVhNmMiLCJpYXQiOjE2NzgxNjQxMzAuNjIxNzM0LCJuYmYiOjE2NzgxNjQxMzAuNjIxNzM1LCJleHAiOjE3MDk3ODY1MzAuNjE5Nzc0LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.cXh-4AgZ962zGZtoEIbZAHbC_1qxs1mIwZwa6NDBJzphmcB5x4oXLoS1o7_4Dn4HVylRSMF4w5uqNT6z64hZAaq5TA-H-xYEfJaLqI2q08ffWDEYHeUAbcXkZJ3CXQ1ZCgePvnISONI5ljscPKBwSMgkG26TtzrlnGRMqcBX4cWjVpLYWMNYL6RXhNS6Gqfmxk6zp-NPNYx8-JH0qm70mwvlwWvmgMeY4aX58WPxlcLsS4xo-wqvKMFL_M4nyKiEwCvztnztSG_Nj4NodIjJGpTsAKi4AWZDGcVXvqBLh5sFuXVQMaJ7HNj-OSCgJuuRIN2WmpxCi0vQwp5c6OHGQo9E5DxUZHvGjH1yo28srSWD56kLPigGQhgOnGVnFpVpnJJ3RrtQMPyw5G-4YcWZc-NmJqsZHKpAwyd13Lev5MS2w_ZXkK-cgeMQyFcD7suBVBbIsESXNtdw1EysdErKZKupyluad8iF5m9Mw_hlNj_ROYrNZnr5zzSUMiBxQX-qDml1yPf5icHBhpUG3m-wx0NTLt-DNlSBwqU3W-LtBTA1nJuktBgSP-RouN1L7rcae8OOqhOaDMHfVuft_5hbyHdW11WgI2vx7Xi6_LviJwa7Fpm36nprU47wHQPx75sScqZqU05u6gYEQaFND_pSwRXDGiLvToZigHdmprXQUDI",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/help-support",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"help-support"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terms Service (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/terms-service",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"terms-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emergency Contact (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/emergency-contact",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"emergency-contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Latest Campaign",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhlY2RkNGI3ZTg2YmMzYjM5YWYxZmI1MjVhZmQzOGQzNWFjYTQ0ZTE5YTY0OWM2ODVkYWM4ZWJkMTc5MTRhOGUwNWE3MzNhZWYwYWQzZTIiLCJpYXQiOjE2NzgwOTM3MDguMDYwNDEsIm5iZiI6MTY3ODA5MzcwOC4wNjA0MTIsImV4cCI6MTcwOTcxNjEwOC4wNTQyNTIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.p2hAixJJVpglr9xsxyItxePV_68mQ1qvnNBKnu1_aktoP1_XswJVNarIaZLk8oDVfWUdA9C2gmlsJryOoRRV-9PfC0trBA_MOEE6guO0VMTLhytWW0UKKH0joNqqMKOTER9HCPILA0-zyHenea72kZe0ZNZgaLwtrFOa82AVVJqub9T13YudkR-z1CWkz9TX8JPgHgXQcR-N5qSOQf-6G5KUJp_wSXRd2zDretHo2J5rpT71O2WYDcX_fAUCztGRfWaKPEZO6iA56K3Zfo__jppWQZD2_Rj-1iZISTIJxRrvbBGG2lrUM4lrqDK-41ah3mgztQbytEJeQDdv527K8aqjw58IK8OGjSSyb0t2-T5tocWFF2iQG5PW_Tf6HwE21e-CoihwMdBDOZ_t2CNWI1jlznuPKa8BAx9ooiS4fejKgQ-cKqO-9zd0kbb1il5ZbHcWSnqshpsJRNUgLvxMGJAtLbi_jHAS6wJWKeIbrajK1vYpZ05jYpUKLfslekeE2u4-NU5EgKUr6ABGbPoIjEUvyGgKyNFP9LEEo0tjH3YtnzdXeDF0lB8N5U94lD6WJ8KA8-_fpjUH7JVTNTk0oWXzZR7zJdFDHn9-zBLUmHvjM2mPIhHzC1zZ9KZ0fRWl45IvQ6ItBru9aNhi0xKxNgZ0PkLmxoVbkOSo7hSs4vk",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/latest-campaign",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"latest-campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Popular Deals Hotel",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNzM1YTFjNzMwYmE3ZGFjNjkwMjYxOGQ4ZGEzMDdlYTRjMjUyYWFhZjYyMzQ0ODgxODNkZjc4MWNlMGI0MDBlNDUxMzNmNzQwZjAzMWUzNjMiLCJpYXQiOjE2NzgzMzY5NDguMDA1MzExLCJuYmYiOjE2NzgzMzY5NDguMDA1MzEyLCJleHAiOjE3MDk5NTkzNDguMDAyMDQ1LCJzdWIiOiIzOCIsInNjb3BlcyI6W119.DWoyYnNcM1Qp6HY7KpPiPW_l9yPplnXNRTRzF-krsSBGQ0DBm9buxj2OElauIof4kWnfsJx0gFClhElvic-knM-5o9nViHX3p5xVlVdpYzevJ26P0d7v0G4FIWY1crLWH3iVnUouYrYYwkW-YzTU3V1flfKEvaaYhHnslHzVwaM7AqnFiOeR8CW1U-70bWtG88t93lUPf8-Jl3PIZ_d0Em3oHnkVoM2yxO_dSaGG1_UnDoGJzZJL9SRybWo-YOyXqyT32_T0REbryJQ2HH3CvR5cwjJoFWyDd-PvZ0BFoA1hqA8r129EqvCKRd_auNjN9zyzoOQ2fc-OOVGkbv6uUqTrxH32A-aJmE0-SVYw5byyxFhcwgrKH11payqUHTa3LrgpEPddqT9rC5LHHRJxagX0Plh3m-sT65O11mvXPfogi1DTA0v-HdIlct1qClg1IxEhNfE8NoKaAR9BBolCvuUarJUXtEEGLlYSy5BIBJ4QTgHUC8pcN6_Fw07vFSE6MO-d3CNQiajroQ8hQmSjuk8udBrPoeHCgnRH3mj0KUzgSkZcQ-u2M_8M-8-ULPnhFnS3nd-xAuVrD6CQ3sr6y9vD69x7Xl4Sg02oD9WBMytr_NzEr2pXx_wLjQu_fcN2vAVgFZcQhKAqHfCNzlv1P-3oezSZlA2cnqbvw2Xfl8I",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/popular_deals_hotel",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"popular_deals_hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Profile with Discount (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"user-agent": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/my-profile/11",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"my-profile",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile (F)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWEzZjIyMDU4NWI2OGJiZWY0MDhmYjAwYzg1NjZmODA3OTc0MWM5NjY1MTBlMDFkZWRjYWY0OTNmYmI0YjZmY2E4NzI0MGIxYzgzMGFiYjciLCJpYXQiOjE2Nzg1MTY4MDEuMTY2NDIsIm5iZiI6MTY3ODUxNjgwMS4xNjY0MjIsImV4cCI6MTcxMDEzOTIwMS4xNjMxNzMsInN1YiI6IjExIiwic2NvcGVzIjpbXX0.vgv6KMouX1AU5IgdgkVwxmQMRVZrmaPwoGVQGzOOHkWnveYDy-o9jjCeu4_x_CPEN_mEBRG0SrnerY3AdNqAMkZLlhKnCYAb58H4HI6k-tmK5Q5yZc5VPxlFqe6tLZkDEEvwtVG9CScT4NAjQG0iYxKcUqimiPTCCKthm3zqh_UeCgqKhKMCzDAdA37iSuSP1qNFmOBEJzG5ZE3zeeVwUzQnhSuWWL_3SQfhXynEy0wkT4jWz5uhaKq8iLMqBhrSmBLmvEuv3wae8erRBOWQKLCuGL0Qg1yRDPGtGCuKQyKOsCJUnf7BoEz56uIhT2gdnsUJiEa9Y8JEB45hpXH4QvIsVqqdPvxeu2Q47XQokCoiK3sNjvOd5NNCUFR6iAn3YMy19yTpEkBsPLUKORwFZUQU9hYoGhpu5kn1kWGRv7yGls8Bf7_4DDKwM5Cg0fw_lG-0_3a9gI_YprclF-K203PO3kD4SgP-xkkfrA1ZzAsie4JV37NIFzxVJFNHad_lgsTUk-Gcq_SmqUD7vwAhfeIGiPdzlGQuR1U64m_iHNhxCrVyw5hF7jPF9Fjy-w1uc2VsiB0Emr3ll5ZeZdHwik-TYScVEu4ijj9ecLJPS3gzJBJnyRSKfnZVCmGTl-OL_vyFaJbmzFSvNkutwx1em9lyECMf5zow5fVV_RiOCAU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "address",
+							"value": "XChittagong",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "010000099",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "10-03-2003",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Farhan Fahidur",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/G:/img test/1556762630233.jpg"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "prefer",
+							"value": "adfa,dada,fttghh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/update-profile/11",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"update-profile",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDIwZGRlOTA3MTAxZDMzNTU3YmMxYjRmNjJjNGVlZDRlOGZhMWRiZjFkMzM4OWQ5OTY4MTRjZmU1MGY4YzcwMmNmYmNhZWQyY2U5OWVlYjQiLCJpYXQiOjE2NzgwOTgzMTIuNjQ5NjAxLCJuYmYiOjE2NzgwOTgzMTIuNjQ5NjA0LCJleHAiOjE3MDk3MjA3MTIuNjQ2NTk5LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.ItJ89oVygMX7z65ZUd_X5VdVBjgoaKm1vPUKLmDcsTyZKXXr0CNMLyCPzJVcZd2mFXqlByw7ebqz1xR4ZzEWmNf5lblVyTcu-Gf5-fIvNmmHHK449DM0TEMe2zc2Wr-LZ-pPvw45Gdl1nc7INml8w7xxEyMbn4uzZS9JDkcjFFVt6oQnGc3lbdMVuGYGpx-DiUv41e9viqYM2c5GyPsELUn6GfzU8X4PDYTSqcU6FNGP4YByOeJc5DvUxmMGyRL9BU7PYGhe9uzK73czGINRvhfcoO-IDTNja1-SpoqpFxUCPealgirK80PdsThMsqWmqMpATmYhZln2HJNLXw7ajNfWN2hI-PoSE80MQdX-tYeCN6B0bUdloPFoXH2VVCrYOBKTYN0AsNIAOCDi-PUK6Dh80f0b2SBmZPqPfTR7UDt09wfmoEcDu52WRtA9-_NUkI_P160MyjPYiMRUkmgPeC_jl7bT0n4x6kBT_qS-wuQKA2F24gndYw2H1Gh2AS0mB7MGUIzobPn5tOV3dRP56cu0JPOpDwFF13czs_J8bl6kJShMLiMcDZzovIlKeYRlv6pL77Gnx3KkTrQPWdBwf_8F8zg6UhYRCXiFPtVXzA_9Btp2fYIocBMokkybn22Fy9DVS37xGGXwg4GnYTa0oK_Ar5_2MZLBwzqWY7sniAg",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ddtravels.matrimonymm.xyz/api/customer-logout",
+					"protocol": "https",
+					"host": [
+						"ddtravels",
+						"matrimonymm",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"customer-logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
